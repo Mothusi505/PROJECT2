@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOTHUSI</title>
+    <link rel="stylesheet" href="style.css">
+ 
+    <style>
+
+
+.content-wrapper { 
+			background-image: url("tswa.jpg") ;
+			background-position: center center;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
+  
+   height: 100%; 
+  width: 100%; 
+  display:table;
+  text-align:center;
+}
+
+
+
+
+.overlay {
+  box-sizing: border-box;
+  width: 100%; 
+  height:45%;
+  bottom: 0; 
+  background-color: rgba(0,0,0,0.15);
+  color: #f7f7f7;
+  padding: 0.5em;
+  display:table-cell;
+  vertical-align:middle;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:400;
+}
+
+
+footer {
+    padding: 60px 0;
+    background-color: black;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav><div class="__navbar">
+      <div class="__navbar-logo">
+        <h1>FAITH HOPE LOVE</h1>
+      </div>
+      <div class="__navbar-menu">
+      <ul class="__navbar-menu-close">
+        <a href="index.html"><li><span>HOME</span></li></a>
+        <a href="video.html"><li><span>SERVICE</span></li></a>
+        <a href="gallery.html"><li><span>GALLERY</span></li></a>
+        <a href="contact.html"><li><span>CONTACT</span></li></a>
+      </ul>
+      <div class="__hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>  
+      </div>
+    </nav>
+  </div>
+  <div class="content-wrapper">
+    <div class="overlay">
+      
+      <h1>FAITH HOPE LOVE<BR>we can with you</h1>   
+       
+        <a href="FUN.HTML" class="button2">ABOUT US</a>
+      </div>
+  
+  </div>
+  <footer>
+    <div class="wrapper">
+        <div id="footer-info">
+            <p style="color: white;text-align: center;">Copyright 2020 molefe m. All rights reserved.</p>
+        
+        </div>
+      
+</footer>
+    <script>
+
+    hamburger = document.querySelector(".__hamburger");
+hamburgerMenu = document.querySelector(".__navbar-menu ul");
+hamburgerMenuItems = document.querySelectorAll("ul li");
+mobileNav = false;
+hamburger.addEventListener("click", this.mobileNavOpen);
+
+function mobileNavOpen() {
+  if (mobileNav === false) {
+    mobileNav = true;
+    hamburgerMenu.classList.add("__navbar-menu-open");
+    hamburgerMenu.classList.remove("__navbar-menu-close");
+  } else {
+    mobileNav = false;
+    hamburgerMenu.classList.remove("__navbar-menu-open");
+    hamburgerMenu.classList.add("__navbar-menu-close");
+  }
+}
+
+hamburgerMenuItems.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileNav = false;
+    hamburgerMenu.classList.remove("__navbar-menu-open");
+    hamburgerMenu.classList.add("__navbar-menu-close");
+  });
+});
+
+</script>
+
+    </body>
+    </html>
